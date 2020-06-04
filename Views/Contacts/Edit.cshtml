@@ -1,0 +1,28 @@
+﻿@model Contact
+@{
+    ViewBag.Title = ViewBag.Action;
+}
+<form asp-action="Edit", method="post">
+    <input asp-for="ID" type="hidden" />
+    <div asp-validation-summary="All"></div>
+    <div class="row m-2">
+        <label asp-for="Name" class="col-md-1">Name: </label>
+        <input asp-for="Name" class="form-control col-md-6 offset-1" />
+    </div>
+    <div class="row m-2">
+        <label asp-for="PhoneNumber" class="col-md-1">Number: </label>
+        <input asp-for="PhoneNumber" class="form-control col-md-6 offset-1" />
+    </div>
+    <div class="row m-2">
+        <label asp-for="Address" class="col-md-1">Address: </label>
+        <input asp-for="Address" class="form-control col-md-6 offset-1" />
+    </div>
+    <div class="row m-2">
+        <label asp-for="Note" class="col-md-1">Note: </label>
+        <input asp-for="Note" class="form-control col-md-6 offset-1" />
+    </div>
+    <div class="row m-2">
+        <button type="submit" class="btn btn-primary col-5 col-md-1 mr-0 mr-md-2">Submit</button>
+        <a asp-action="Edit" class="btn btn-secondary col-5 col-md-1 offset-2 offset-md-0">Clear</a>
+    </div>
+</form>

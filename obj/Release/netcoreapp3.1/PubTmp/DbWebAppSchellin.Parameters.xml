@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="cis174kschellin" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\User\\source\\repos\\DbWebAppSchellin\\DbWebAppSchellin\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="DbWebAppSchellin.Models.ContactContext" description="" value="Server=tcp:dbwebappschellindbserver.database.windows.net,1433;Initial Catalog=DbWebAppSchellin_db;Persist Security Info=False;User ID=Kai;Password=Ultimatenerd1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\User\\source\\repos\\DbWebAppSchellin\\DbWebAppSchellin\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\DbWebAppSchellin\.Models\.ContactContext\.sql$" />
+  </parameter>
+</parameters>

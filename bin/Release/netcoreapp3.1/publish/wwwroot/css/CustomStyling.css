@@ -1,0 +1,23 @@
+﻿.NavbarBackground {
+    background-color: #00A500
+}
+.NavbarText {
+    font-size: 40px;
+    font-weight: 700;
+    color :white       
+}
+.NavbarItem {
+    font-size: 24px;
+    font-weight: 600;
+    color: greenyellow
+}
+.ContactOutline {
+    background-color: #00A500;
+    border-radius: 25px;
+    border: 8px solid greenyellow
+}
+.ContactText{
+    color: white;
+    font-weight: 600;
+    font-size: 18px
+}

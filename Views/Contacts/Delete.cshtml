@@ -1,0 +1,12 @@
+﻿@model Contact
+
+<form asp-action="Delete" method="post">
+    <div class="container">
+        <div class="row ContactOutline mt-5 pt-5 pb-5">
+            <label class="col-4 mt-3 ContactText">Are you sure you want to delete @Model.Name ?</label>
+            <button type="submit" class="btn btn-primary col-2 offset-1 pt-3 pb-3">Yes</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary col-2 offset-1 pt-3 pb-3">
+            <span class="align-content-center">No</span></a>
+        </div>
+    </div>
+</form>
