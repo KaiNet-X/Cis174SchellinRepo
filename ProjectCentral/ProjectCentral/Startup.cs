@@ -33,10 +33,10 @@ namespace ProjectCentral
                     options.AppendTrailingSlash = true;
                 });
 
-            services.AddDbContext<ContactContext>(options =>
+            services.AddDbContext<ContactContextModel>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ContactContext")));
 
-            services.AddDbContext<MovieContext>(options =>
+            services.AddDbContext<MovieContextModel>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
         }
 

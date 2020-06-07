@@ -9,7 +9,7 @@ using ProjectCentral.Models;
 
 namespace ProjectCentral.Migrations
 {
-    [DbContext(typeof(MovieContext))]
+    [DbContext(typeof(MovieContextModel))]
     [Migration("20200606220607_M1")]
     partial class M1
     {

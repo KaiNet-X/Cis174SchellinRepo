@@ -9,25 +9,25 @@ namespace ProjectCentral.Controllers
 {
     public class ContactsController : Controller
     {
-        ContactContext context { get; }
-        public ContactsController(ContactContext context)
+        ContactContextModel context { get; }
+        public ContactsController(ContactContextModel context)
         {
             this.context = context;
         }
         public IActionResult Add()
         {
             ViewBag.Action = "Add";
-            return RedirectToAction("Edit", new Contact());
+            return RedirectToAction("Edit", new ContactModel());
         }
         [HttpGet]
         public IActionResult Edit(int ID)
         {
-            Contact contact = context.Contacts.Find(ID);
+            ContactModel contact = context.Contacts.Find(ID);
             ViewBag.Action = "Edit";
             return View(contact);
         }
         [HttpPost]
-        public IActionResult Edit(Contact contact)
+        public IActionResult Edit(ContactModel contact)
         {
             if (ModelState.IsValid)
             {
@@ -46,11 +46,11 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Delete(int ID)
         {
-            Contact contact = context.Contacts.Find(ID);
+            ContactModel contact = context.Contacts.Find(ID);
             return View(contact);
         }
         [HttpPost]
-        public IActionResult Delete(Contact contact)
+        public IActionResult Delete(ContactModel contact)
         {
             context.Contacts.Remove(contact);
             context.SaveChanges();

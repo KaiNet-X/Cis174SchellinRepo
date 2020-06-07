@@ -77,3 +77,5 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Contacts\Detail.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Contacts\Edit.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ContactsLayout.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.cis174kschellin - Web Deploy.json
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json

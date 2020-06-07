@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEfyZz2rkkCK073MXUzmkwAAAAACAAAAAAAQZgAAAAEAACAAAABkZiYF21YeJCBgTt7EAIPERlx9SxwsCU5aTY8cMMZFIwAAAAAOgAAAAAIAACAAAABE9qaWpa4uEF3hXXQ5LzcykbFtbva3ICioPJyXepeX94AAAABRGit6SylzaIVHHLUDgXHwWRUZVzcBO0JScJAP8YFriYkAhjCOO/8FXlTNUsfXqwnbD/3Co33qNDe1Rm6W+HQbFQdQNhU8JhIgPMKpSCPd7F5/65xOnUsagEKR7OroaUDCzydG+r0OrP7k65rmQUwDRgzcKCjnvmThWYMrYk+gFEAAAADlhk0k7LQef0MkLTIzE0eDssXCUH9Z2tucP/Fimg6bXHP6h9iUsm280UPuyLy3DOAKomZpmJduMijDrVwN2fMj</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ContactContext">
+      <Value>Data Source=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bUser Id=KAI%40dbwebappschellindbserver%3bPassword=ultimatenerd1Schellin_db%3bUser Id=KAI%40dbwebappschellindbserver%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="MovieContext">
+      <Value>Data Source=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bUser Id=KAI%40dbwebappschellindbserver%3bPassword=ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="ProjectCentral.Models.ContactContext">
+      <Value>Server=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bPersist Security Info=False%3bUser ID=Kai%3bPassword=Ultimatenerd1%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+    <EFMigrations Include="ProjectCentral.Models.MovieContext">
+      <Value>Server=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bPersist Security Info=False%3bUser ID=Kai%3bPassword=Ultimatenerd1%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

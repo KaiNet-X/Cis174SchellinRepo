@@ -8,7 +8,7 @@ using ProjectCentral.Models;
 
 namespace ProjectCentral.Migrations
 {
-    [DbContext(typeof(MovieContext))]
+    [DbContext(typeof(MovieContextModel))]
     partial class MovieContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

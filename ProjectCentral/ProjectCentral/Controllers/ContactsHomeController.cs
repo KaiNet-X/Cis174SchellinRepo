@@ -11,14 +11,14 @@ namespace ProjectCentral.Controllers
 {
     public class ContactsHomeController : Controller
     {
-        ContactContext context;
-        public ContactsHomeController(ContactContext context)
+        ContactContextModel context;
+        public ContactsHomeController(ContactContextModel context)
         {
             this.context = context;
         }
         public IActionResult Index()
         {
-            List<Contact> contacts = context.Contacts.OrderBy(c => c.ID).ToList();
+            List<ContactModel> contacts = context.Contacts.OrderBy(c => c.ID).ToList();
             return View(contacts);
         }
     }

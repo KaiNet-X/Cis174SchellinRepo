@@ -12,9 +12,9 @@ namespace ProjectCentral.Controllers
 {
     public class MovieHomeController : Controller
     {
-        private MovieContext context;
+        private MovieContextModel context;
 
-        public MovieHomeController(MovieContext ctx)
+        public MovieHomeController(MovieContextModel ctx)
         {
             context = ctx;
         }

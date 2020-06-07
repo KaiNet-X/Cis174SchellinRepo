@@ -10,8 +10,8 @@ namespace ProjectCentral.Controllers
 {
     public class MovieController : Controller
     {
-        private MovieContext context;
-        public MovieController(MovieContext ctx)
+        private MovieContextModel context;
+        public MovieController(MovieContextModel ctx)
         {
             context = ctx;
         }
@@ -20,7 +20,7 @@ namespace ProjectCentral.Controllers
         {
             ViewBag.Action = "Add";
             ViewBag.Genres = context.Genres.OrderBy(g => g.Name).ToList();
-            return View("Edit", new Movie());
+            return View("Edit", new MovieModel());
         }
         [HttpGet]
         public IActionResult Edit(int id)
@@ -31,7 +31,7 @@ namespace ProjectCentral.Controllers
             return View(movie);
         }
         [HttpPost]
-        public IActionResult Edit(Movie movie)
+        public IActionResult Edit(MovieModel movie)
         {
             if (ModelState.IsValid)
             {
@@ -50,11 +50,11 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            Movie movie = context.Movies.Find(id);
+            MovieModel movie = context.Movies.Find(id);
             return View(movie);
         }
         [HttpPost]
-        public IActionResult Delete(Movie movie)
+        public IActionResult Delete(MovieModel movie)
         {
             context.Movies.Remove(movie);
             context.SaveChanges();

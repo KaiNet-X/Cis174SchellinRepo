@@ -1,4 +1,4 @@
-﻿@model Movie
+﻿@model MovieModel
 @{
     ViewBag.Title = ViewBag.Action + " Movie";
     Layout = "_MoviesLayout";
@@ -20,7 +20,7 @@
         <label asp-for="GenreID">Genre</label>
         <select asp-for="GenreID" class="form-control">
             <option value="">Select a Genre</option>
-            @foreach (Genre genre in ViewBag.Genres)
+            @foreach (GenreModel genre in ViewBag.Genres)
             {
                 <option value="@genre.GenreID">@genre.Name</option>
             }
