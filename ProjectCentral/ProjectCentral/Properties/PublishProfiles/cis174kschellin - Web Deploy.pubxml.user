@@ -15,13 +15,8 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <DestinationConnectionStrings Include="MovieContext">
       <Value>Data Source=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bUser Id=KAI%40dbwebappschellindbserver%3bPassword=ultimatenerd1</Value>
     </DestinationConnectionStrings>
-  </ItemGroup>
-  <ItemGroup>
-    <EFMigrations Include="ProjectCentral.Models.ContactContext">
-      <Value>Server=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bPersist Security Info=False%3bUser ID=Kai%3bPassword=Ultimatenerd1%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
-    </EFMigrations>
-    <EFMigrations Include="ProjectCentral.Models.MovieContext">
-      <Value>Server=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bPersist Security Info=False%3bUser ID=Kai%3bPassword=Ultimatenerd1%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
-    </EFMigrations>
+    <DestinationConnectionStrings Include="UserContext">
+      <Value>Data Source=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bUser Id=%40dbwebappschellindbserver%3bPassword=</Value>
+    </DestinationConnectionStrings>
   </ItemGroup>
 </Project>

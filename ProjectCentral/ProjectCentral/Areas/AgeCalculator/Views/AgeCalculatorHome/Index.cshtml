@@ -1,0 +1,48 @@
+﻿@model PersonAgeModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/CustomCSS.css" rel="stylesheet" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/popper.js/cjs/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="jumbotron">
+        <span class="control-label EyeCatching bg-light">Age Calculator</span>
+    </header>
+    <form asp-action="Index" method="post">
+        <div asp-validation-summary="All">
+
+        </div>
+        <div class="row">
+            <label class="control-label col-sm-1">Your Name:</label>
+            <input asp-for="Name" class="form-control col-10 col-sm-5 offset-1" />
+        </div>
+
+        <div class="row mt-2">
+            <label class="control-label col-sm-1">Your Birthday:</label>
+            <input asp-for="Birthday" class="form-control col-10 col-sm-5 offset-1" />
+        </div>
+        <div class="row mt-2">
+            <label class="control-label col-sm-1">Result</label>
+            <input class="form-control col-10 col-sm-5 offset-1 bg-primary" readonly value="@ViewBag.Result" />
+        </div>
+        <div class="row mt-5 ml-1 mr-1">
+            <button type="submit" class="btn btn-outline-primary col-sm-2">Calculate Age</button>
+            <a asp-action="Index" class="btn btn-outline-secondary col-sm-2">Clear</a>
+        </div>
+    </form>
+</body>
+</html>

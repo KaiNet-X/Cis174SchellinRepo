@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjectCentral.Areas.Contacts.Models;
+using ProjectCentral.Areas.Movies.Models;
 using ProjectCentral.Models;
 
 namespace ProjectCentral
@@ -38,6 +40,9 @@ namespace ProjectCentral
 
             services.AddDbContext<MovieContextModel>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
+
+            services.AddDbContext<UserContextModel>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("UserContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +67,22 @@ namespace ProjectCentral
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapAreaControllerRoute(
+                    name: "contacts",
+                    areaName: "Contacts",
+                    pattern: "Contacts/{controller}/{action}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                    name: "age calculator",
+                    areaName: "AgeCalculator",
+                    pattern: "AgeCalculator/{controller}/{action}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                    name: "future value",
+                    areaName: "FutureValue",
+                    pattern: "FutureValue/{controller}/{action}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                    name: "movies",
+                    areaName: "Movies",
+                    pattern: "Movies/{controller}/{action}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -1,0 +1,13 @@
+﻿@model MovieModel
+@{
+    ViewBag.title = "Delete Movie";
+    Layout = "_MoviesLayout";
+}
+<h2>Confirm Deletion</h2>
+<h3>@Model.Name (@Model.Year)</h3>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="MovieID" />
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a asp-controller="MovieHome" asp-action="Index" class="btn btn-primary">Cancel</a>
+</form>
