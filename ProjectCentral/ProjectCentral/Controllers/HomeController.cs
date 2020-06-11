@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Security.Permissions;
-using System.Security.Principal;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ProjectCentral.Models;
-using Microsoft.AspNetCore.Session;
-using System.Web;
 using Microsoft.AspNetCore.Http;
 
 namespace ProjectCentral.Controllers
@@ -57,7 +49,8 @@ namespace ProjectCentral.Controllers
         {
             if (AuthenticationModel.RegisterUser(User))
             {
-                AuthenticationModel.AddSessionUser(User, HttpContext.Session.Id);
+                UserModel DbUser = AuthenticationModel.DatabaseAccurateUser(User);
+                AuthenticationModel.AddSessionUser(DbUser, HttpContext.Session.Id);
                 HttpContext.Session.SetString(" ", " ");
                 return RedirectToAction("Index");
             }

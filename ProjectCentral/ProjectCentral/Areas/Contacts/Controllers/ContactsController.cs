@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ProjectCentral.Areas.Contacts.Models;
+﻿using ProjectCentral.Areas.Contacts.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProjectCentral.Areas.Contacts.Controllers

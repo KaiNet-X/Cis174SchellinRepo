@@ -161,3 +161,4 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.dll
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.pdb
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.genruntimeconfig.cache
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Properties\serviceDependencies.local.json

@@ -3,7 +3,7 @@
     ViewBag.Title = "Login";
 }
 
-<form asp-action="Login" method="post">
+<form asp-controller="Home" asp-action="Login" method="post">
     <div class="row m-1">
         <label class="col-md-1 form-text">Username:</label>
         <input asp-for="@Model.UserName" style="height: 30px; align-self: center" class="col-md-4 form-control" />

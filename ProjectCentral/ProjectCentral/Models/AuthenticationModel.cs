@@ -1,14 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Principal;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Security.Permissions;
-using Microsoft.AspNetCore.Http;
-using System.Globalization;
-//using System.Security.Permissions.Principal;
 
 namespace ProjectCentral.Models
 {
@@ -18,10 +10,6 @@ namespace ProjectCentral.Models
 
         private static List<UserAssignment> SessionUserAssignment = new List<UserAssignment>();
 
-        public static UserModel GetUser(string Username)
-        {
-            return UserContext.Users.SingleOrDefault(usr => usr.UserName == Username);
-        }
         public static bool UserExists(UserModel User)
         {
             User = UserContext.Users.SingleOrDefault(usr => usr.UserName == User.UserName);
