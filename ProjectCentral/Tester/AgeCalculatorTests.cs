@@ -1,5 +1,5 @@
 using System;
-using ProjectCentral.Models;
+using ProjectCentral.Areas.AgeCalculator.Models;
 using Xunit;
 
 namespace Tester

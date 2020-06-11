@@ -10,7 +10,7 @@ namespace ProjectCentral.Models
     {
         [Required]
         [Key]
-        public uint? UserID { get; set; }
+        public int? UserID { get; set; }
         [Required(ErrorMessage = "Please enter a user name")]
         public string UserName { get; set; }
         [Required(ErrorMessage = "Please enter a password")]

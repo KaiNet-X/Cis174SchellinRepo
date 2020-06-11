@@ -39,6 +39,16 @@ namespace ProjectCentral.Models
 
             return false;
         }
+        public static UserModel DatabaseAccurateUser(UserModel User)
+        {
+            UserModel Correct = UserContext.Users.Include(usr => usr.Role).SingleOrDefault(usr => usr.UserName == User.UserName);
+            if (Correct == null) return null;
+
+            if (User.UserName == Correct.UserName && User.Password == Correct.Password) return Correct;
+
+            return null;
+
+        }
         public static bool RegisterUser(UserModel User)
         {
             if (!UserExists(User))

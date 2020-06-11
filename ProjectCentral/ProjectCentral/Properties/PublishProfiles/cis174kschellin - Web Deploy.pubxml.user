@@ -19,4 +19,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <Value>Data Source=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bUser Id=%40dbwebappschellindbserver%3bPassword=</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="ProjectCentral.Models.UserContextModel">
+      <Value>Data Source=tcp:dbwebappschellindbserver.database.windows.net,1433%3bInitial Catalog=DbWebAppSchellin_db%3bUser Id=Kai%40dbwebappschellindbserver%3bPassword=Ultimatenerd1</Value>
+    </EFMigrations>
+  </ItemGroup>
 </Project>

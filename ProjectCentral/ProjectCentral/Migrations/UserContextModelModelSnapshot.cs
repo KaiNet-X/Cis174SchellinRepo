@@ -49,9 +49,10 @@ namespace ProjectCentral.Migrations
 
             modelBuilder.Entity("ProjectCentral.Models.UserModel", b =>
                 {
-                    b.Property<long>("UserID")
+                    b.Property<int?>("UserID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -73,7 +74,7 @@ namespace ProjectCentral.Migrations
                     b.HasData(
                         new
                         {
-                            UserID = 1L,
+                            UserID = 1,
                             Password = "Admin",
                             RoleID = 1,
                             UserName = "Admin"

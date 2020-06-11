@@ -7,6 +7,8 @@ using System.Security.Principal;
 using Microsoft.AspNetCore.Mvc;
 using ProjectCentral.Models;
 using Microsoft.AspNetCore.Session;
+using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace ProjectCentral.Controllers
 {
@@ -18,11 +20,18 @@ namespace ProjectCentral.Controllers
         }
         public IActionResult Index()
         {
+            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id) != null) 
+            {
+                UserModel user = AuthenticationModel.GetSessionUser(HttpContext.Session.Id);
+                ViewBag.Username = user.UserName;
+                ViewBag.Role = user.Role.RoleName;
+            }
             return View();
         }
         [HttpGet]
         public IActionResult Login()
         {
+            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id) != null) return RedirectToAction("Index");
             return View();
         }
         [HttpPost]
@@ -30,7 +39,9 @@ namespace ProjectCentral.Controllers
         {
             if (AuthenticationModel.UserInfoCorrect(User))
             {
-                AuthenticationModel.AddSessionUser(User, HttpContext.Session.Id);
+                UserModel DbUser = AuthenticationModel.DatabaseAccurateUser(User);
+                AuthenticationModel.AddSessionUser(DbUser, HttpContext.Session.Id);
+                HttpContext.Session.SetString(" ", " ");
                 return RedirectToAction("Index");
             }
             return View();
@@ -38,6 +49,7 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id) != null) return RedirectToAction("Index");
             return View();
         }
         [HttpPost]
@@ -46,6 +58,7 @@ namespace ProjectCentral.Controllers
             if (AuthenticationModel.RegisterUser(User))
             {
                 AuthenticationModel.AddSessionUser(User, HttpContext.Session.Id);
+                HttpContext.Session.SetString(" ", " ");
                 return RedirectToAction("Index");
             }
             return View();
