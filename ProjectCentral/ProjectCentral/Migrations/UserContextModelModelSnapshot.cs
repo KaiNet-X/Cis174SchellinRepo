@@ -44,6 +44,11 @@ namespace ProjectCentral.Migrations
                         {
                             RoleID = 2,
                             RoleName = "User"
+                        },
+                        new
+                        {
+                            RoleID = 3,
+                            RoleName = "Anonymous"
                         });
                 });
 
@@ -78,6 +83,13 @@ namespace ProjectCentral.Migrations
                             Password = "Admin",
                             RoleID = 1,
                             UserName = "Admin"
+                        },
+                        new
+                        {
+                            UserID = 2,
+                            Password = "",
+                            RoleID = 3,
+                            UserName = ""
                         });
                 });
 

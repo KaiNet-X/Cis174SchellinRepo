@@ -12,18 +12,30 @@ namespace ProjectCentral.Controllers
         }
         public IActionResult Index()
         {
-            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id) != null) 
-            {
-                UserModel user = AuthenticationModel.GetSessionUser(HttpContext.Session.Id);
-                ViewBag.Username = user.UserName;
-                ViewBag.Role = user.Role.RoleName;
-            }
+            UserModel user = AuthenticationModel.GetSessionUser(HttpContext.Session.Id);
+            ViewBag.Username = user.UserName;
+            ViewBag.Role = user.Role.RoleName;
+            ViewBag.SignedIn = AuthenticationModel.GetSessionUser(HttpContext.Session.Id).RoleID != 3;
+
             return View();
+        }
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            UserModel user = AuthenticationModel.GetSessionUser(HttpContext.Session.Id);
+            ViewBag.Username = user.UserName;
+            ViewBag.Role = user.Role.RoleName;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Logout(byte falsevalue = 0)
+        {
+            AuthenticationModel.RemoveSessionUser(HttpContext.Session.Id);
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Login()
         {
-            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id) != null) return RedirectToAction("Index");
             return View();
         }
         [HttpPost]
@@ -41,7 +53,6 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id) != null) return RedirectToAction("Index");
             return View();
         }
         [HttpPost]

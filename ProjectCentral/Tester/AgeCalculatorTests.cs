@@ -7,7 +7,7 @@ namespace Tester
     public class AgeCalculatorTests
     {
         [Fact]
-        public void AgeByEndOfTest()
+        public void AgeByEndOfYearTest()
         {
             DateTime Birthday = new DateTime(2000, 1, 1);
             int ageThisYear = 2020 - Birthday.Year;
@@ -17,10 +17,10 @@ namespace Tester
             Assert.Equal(ageThisYear, person.AgeThisYear());
         }
         /*
-Age today variable is calculated before PersonAge.
-AgeToday is called, so the output of both must be slightly
-modified to be less precise.
-*/
+        Age today variable is calculated before PersonAge.
+        AgeToday is called, so the output of both must be slightly
+        modified to be less precise.
+        */
         [Fact]
         public void AgeTodayTest()
         {

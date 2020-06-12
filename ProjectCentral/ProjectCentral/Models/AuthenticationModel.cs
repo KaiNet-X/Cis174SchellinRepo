@@ -27,6 +27,7 @@ namespace ProjectCentral.Models
 
             return false;
         }
+
         public static UserModel DatabaseAccurateUser(UserModel User)
         {
             UserModel Correct = UserContext.Users.Include(usr => usr.Role).SingleOrDefault(usr => usr.UserName == User.UserName);
@@ -36,6 +37,13 @@ namespace ProjectCentral.Models
 
             return null;
 
+        }
+        private static UserModel DatabaseInstance(UserModel User)
+        {
+            UserModel Correct = UserContext.Users.Include(usr => usr.Role).SingleOrDefault(usr => usr.UserName == User.UserName);
+            if (Correct == null) return null;
+
+            return Correct;
         }
         public static bool RegisterUser(UserModel User)
         {
@@ -47,13 +55,41 @@ namespace ProjectCentral.Models
             }
             return false;
         }
+        public static void RemoveUser(UserModel User)
+        {
+            if (UserExists(User) && User.RoleID == 2)
+            {
+                UserContext.Users.Remove(DatabaseInstance(User));
+                UserContext.SaveChanges();
+            }
+        }
+        private static UserModel GetDefaultUser()
+        {
+            return UserContext.Users.Include(rol => rol.Role).SingleOrDefault(def => def.RoleID == 3);
+        }
+        public static UserModel GetUserWithID(int ID)
+        {
+            return UserContext.Users.Find(ID);
+        }
         public static void AddSessionUser(UserModel User, string SessionID)
         {
             SessionUserAssignment.Add(new UserAssignment() { User = User, SessionID = SessionID });
         }
         public static UserModel GetSessionUser(string SessionID)
         {
-            return SessionUserAssignment.Find(usrsess => usrsess.SessionID == SessionID).User;
+            UserModel User =  SessionUserAssignment.Find(usrsess => usrsess.SessionID == SessionID).User;
+            if (User == null) User = GetDefaultUser();
+            return User;
+        }
+        public static List<UserModel> GetBasicUsers()
+        {
+            return UserContext.Users.Where(usr => usr.RoleID == 2).ToList();
+        }
+        public static void RemoveSessionUser(string SessionID)
+        {
+            UserAssignment? User = SessionUserAssignment.Find(usrsess => usrsess.SessionID == SessionID);
+            if (User != null)
+                SessionUserAssignment.Remove(User.Value);
         }
         private struct UserAssignment
         {

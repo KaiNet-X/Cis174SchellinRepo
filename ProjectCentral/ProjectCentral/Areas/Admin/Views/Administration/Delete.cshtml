@@ -1,0 +1,31 @@
+﻿@model UserModel
+@{ 
+    ViewBag.Title = "DELETE";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-dark">
+    <form asp-action="Delete" method="post">
+        <div class="container justify-content-center">
+            <h2 class="form-text text-danger text-center mb-5">Delete @Model.UserName?</h2>
+            <div class="row">
+                <button type="submit" style="font-size: 20px"
+                        class=" col btn btn-danger pl-5 pr-5 pt-2 pb-2 mr-5">Yes</button>
+                <a asp-action="AdminPage" style="font-size: 20px"
+                   class="col btn btn-warning pl-5 pr-5 pt-2 pb-2 ml-5">No</a>
+            </div>
+        </div>
+        <input asp-for="UserName" type="hidden" />
+        <input asp-for="RoleID" type="hidden" />
+    </form>
+</body>
+</html>
+

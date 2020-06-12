@@ -6,6 +6,11 @@
     <title>@ViewBag.Title - ProjectCentral</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -34,6 +39,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="AgeCalculator" asp-controller="AgeCalculatorHome" asp-action="Index">Age Calculator</a>
                         </li>
+                        @if (ViewBag.Role == "Administrator")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" asp-area="Admin" asp-controller="Administration" asp-action="AdminPage">Admin Zone</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

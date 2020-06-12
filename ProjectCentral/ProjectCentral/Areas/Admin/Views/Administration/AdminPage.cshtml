@@ -1,0 +1,29 @@
+﻿@model List<UserModel>
+@{ 
+    ViewBag.Title = "The Shadow Realm";
+}
+<!Doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <h2 class="form-text text-danger text-center m-5">You have entered the admin zone</h2>
+        <ul class="list-group mb-5">
+            @foreach (UserModel User in Model)
+            {
+                <li class="list-group-item m-2">
+                    <span class="form-text">@User.UserName</span>
+                    <a asp-action="Delete" asp-route-id="@User.UserID" class="btn btn-danger">delete</a>
+                </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

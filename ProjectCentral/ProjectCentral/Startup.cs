@@ -22,7 +22,7 @@ namespace ProjectCentral
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
 
             services.AddSession();
@@ -69,22 +69,12 @@ namespace ProjectCentral
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapAreaControllerRoute(
-                    name: "contacts",
-                    areaName: "Contacts",
-                    pattern: "Contacts/{controller}/{action}/{id?}");
-                endpoints.MapAreaControllerRoute(
-                    name: "age calculator",
-                    areaName: "AgeCalculator",
-                    pattern: "AgeCalculator/{controller}/{action}/{id?}");
-                endpoints.MapAreaControllerRoute(
-                    name: "future value",
-                    areaName: "FutureValue",
-                    pattern: "FutureValue/{controller}/{action}/{id?}");
-                endpoints.MapAreaControllerRoute(
-                    name: "movies",
-                    areaName: "Movies",
-                    pattern: "Movies/{controller}/{action}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "custom",
+                    pattern: "{controller=Dummy}/{action=CustRoute}/stoopid/dummy/{ree}");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{area:exists}/{controller}/{action}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -2,14 +2,19 @@
 @{ 
     Layout = "_ContactsLayout";
 }
+<style>
+    .FixTextAlign{
+        white-space: nowrap
+    }
+    
+</style>
 <form asp-action="Delete" method="post">
     <div class="container">
-        <div class="row ContactOutline mt-5 pt-5 pb-5">
-            <label class="col-4 mt-3 ContactText">Are you sure you want to delete @Model.Name ?</label>
-            <button type="submit" class="btn btn-primary col-2 offset-1 pt-3 pb-3">Yes</button>
-            <a asp-controller="ContactsHome" asp-action="Index" class="btn btn-secondary col-2 offset-1 pt-3 pb-3">
-                <span class="align-content-center">No</span>
-            </a>
+        <div class="row ContactOutline mt-5 pb-2 pt-sm-3 pb-sm-3 pt-md-5 pb-md-5 align-items-center">
+            <label class="col-sm-5 col-md-4 mt-3 ContactText text-center">Are you sure you want to delete @Model.Name ?</label>
+            <button type="submit" class="btn btn-primary col-sm-3 col-md-2 offset-md-1 mt-1 mr-sm-2 mr-md-5 pt-md-2 pb-md-2">Yes</button>
+            <a role="button" asp-controller="ContactsHome" asp-action="Index"
+               class="btn btn-secondary col-sm-3 col-md-2 mt-2 mt-sm-1 pt-md-2 pb-md-2">No</a>
         </div>
     </div>
 </form>

@@ -127,7 +127,6 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.TagHelpers.input.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.TagHelpers.output.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.RazorCoreGenerate.cache
-C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\AdminPage.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\AgeCalculator\Views\AgeCalculatorHome\Index.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\AgeCalculator\Views\_ViewImports.cshtml.g.cs
@@ -162,3 +161,10 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.pdb
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.genruntimeconfig.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Properties\serviceDependencies.local.json
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\libman.json
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Administration\AdminPage.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Administration\Delete.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Views\Dummy\AttribRoute.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Views\Dummy\CustRoute.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Views\Dummy\DefRoute.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Views\Home\Logout.cshtml.g.cs

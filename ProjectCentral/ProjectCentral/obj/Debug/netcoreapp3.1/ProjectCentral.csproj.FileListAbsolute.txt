@@ -154,7 +154,6 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Contacts\Views\Shared\_ContactsLayout.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\FutureValue\Views\Shared\_FutureValueLayout.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Movies\Views\Shared\_MoviesLayout.cshtml.g.cs
-C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AdminPage.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
@@ -162,3 +161,10 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Home\Logout.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Administration\AdminPage.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Administration\Delete.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Dummy\AttribRoute.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Dummy\CustRoute.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Dummy\DefRoute.cshtml.g.cs
