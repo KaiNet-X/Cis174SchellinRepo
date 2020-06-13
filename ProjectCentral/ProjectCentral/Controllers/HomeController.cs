@@ -22,6 +22,8 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Logout()
         {
+            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id).Role.RoleName == "Anonymous")
+                return RedirectToAction("Index");
             UserModel user = AuthenticationModel.GetSessionUser(HttpContext.Session.Id);
             ViewBag.Username = user.UserName;
             ViewBag.Role = user.Role.RoleName;
@@ -36,6 +38,8 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id).Role.RoleName != "Anonymous")
+                return RedirectToAction("Index");
             return View();
         }
         [HttpPost]
@@ -53,6 +57,8 @@ namespace ProjectCentral.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            if (AuthenticationModel.GetSessionUser(HttpContext.Session.Id).Role.RoleName != "Anonymous")
+                return RedirectToAction("Index");
             return View();
         }
         [HttpPost]

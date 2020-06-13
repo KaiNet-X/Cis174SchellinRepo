@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace ProjectCentral.Models
 {
-    public class GenreModel
+    public class ActiveSessionGetterModel
     {
-        public string GenreID { get; set; }
-        public string Name { get; set; }
+
     }
 }
