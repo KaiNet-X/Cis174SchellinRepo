@@ -1,0 +1,42 @@
+﻿@model StudentViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @if (Model.AccessLevel <= 2)
+    {
+        <h1 class="form-text">You do not have sufficient data to view this data</h1>
+    }
+    else if (Model.AccessLevel < 8)
+    {
+        foreach (StudentModel student in Model.Students)
+        {
+            <div style="border-radius:5px" class="row m-1 m-md-5 ml-md-1 mt-0 pb-2 pt-2 bg-secondary">
+                <span class="col-md-2 form-text text-light">First name: @student.FirstName</span>
+                <span class="col-md-2 form-text text-light">Last name: @student.LastName</span>
+            </div>
+        }
+    }
+    else if (Model.AccessLevel <= 10)
+    {
+        <h1 class="form-text">Hello Admin</h1>
+        foreach (StudentModel student in Model.Students)
+        {
+            byte b = (byte)(student.Grade ==
+                'A' ? 0 : student.Grade == 'B' ? 0 : student.Grade == 'C' ? 1 :
+                student.Grade == 'D' ? 2 : 2);
+            <div style="border-radius:5px" class="row m-1 m-md-5 ml-md-1 mt-0 pb-2 pt-2 bg-secondary">
+                <span class="col-md-2 form-text text-light">First name: @student.FirstName</span>
+                <span class="col-md-2 form-text text-light">Last name: @student.LastName</span>
+                <span style="color: @(b == 0 ? "green" : b == 1 ? "yellow" : "red")" class="col-md-1 form-text offset-md-1">Grade: @student.Grade</span>
+            </div>
+        }
+    }
+</body>
+</html>
