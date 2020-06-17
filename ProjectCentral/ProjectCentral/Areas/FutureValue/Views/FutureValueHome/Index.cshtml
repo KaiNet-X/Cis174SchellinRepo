@@ -7,22 +7,22 @@
 <form asp-action="Index" method="post">
     <div asp-validation-summary="All"></div>
     <div class="row">
-        <label asp-for="MonthlyInvestment" class="col-md-4">Monthly Investment:</label>
-        <input asp-for="MonthlyInvestment" class="col-md-8" />
+        <label asp-for="MonthlyInvestment" class="col-md-2">Monthly Investment:</label>
+        <input asp-for="MonthlyInvestment" class="col-md-4" />
     </div>
-    <div>
-        <label asp-for="YearlyInterestRate" class="col-md-4">Yearly Interest Rate:</label>
-        <input asp-for="YearlyInterestRate" class="col-md-8" />
+    <div class="row">
+        <label asp-for="YearlyInterestRate" class="col-md-2">Yearly Interest Rate:</label>
+        <input asp-for="YearlyInterestRate" class="col-md-4" />
     </div>
-    <div>
-        <label asp-for="Years" class="col-md-4">Years:</label>
-        <input asp-for="Years" class="col-md-8" />
+    <div class="row">
+        <label asp-for="Years" class="col-md-2">Years:</label>
+        <input asp-for="Years" class="col-md-4" />
     </div>
-    <div>
-        <label>Future Value:</label>
-        <input value="@ViewBag.FV.ToString("C2")" readonly>
+    <div class="row">
+        <label class="col-md-1">Future Value:</label>
+        <input value="@ViewBag.FV.ToString("C2")" class="col-md-2" readonly>
     </div>
-    <button type="submit">Calculate</button>
-    <a asp-action="Index">Clear</a>
+        <button type="submit">Calculate</button>
+        <a asp-action="Index">Clear</a>
 </form>
 
