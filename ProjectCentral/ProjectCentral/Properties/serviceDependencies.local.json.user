@@ -2,21 +2,25 @@
   "dependencies": {
     "mssql3": {
       "restored": true,
-      "restoreTime": "2020-06-11T02:34:05.0256589Z"
+      "restoreTime": "2020-06-19T19:14:08.6297422Z"
     },
     "mssql2": {
       "restored": true,
-      "restoreTime": "2020-06-11T02:33:44.8849028Z"
+      "restoreTime": "2020-06-19T19:13:47.7892499Z"
     },
     "mssql1": {
       "restored": true,
-      "restoreTime": "2020-06-11T02:34:21.6407318Z"
+      "restoreTime": "2020-06-19T19:13:20.6493808Z"
     }
   },
   "parameters": {
     "resourceGroup": {
       "Type": "resourceGroup",
       "Value": "cis174kschellin"
+    },
+    "subscriptionId1": {
+      "Type": "subscription",
+      "Value": "ba9a3794-0cff-4d09-bb8f-90d232f83283"
     },
     "subscriptionId": {
       "Type": "subscription",

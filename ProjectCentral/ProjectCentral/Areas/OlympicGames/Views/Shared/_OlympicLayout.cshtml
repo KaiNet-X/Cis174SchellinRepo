@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body style="font-family: 'Times New Roman'">
+    <header>
+        <nav class="nav bg-primary fixed-top">
+            <span class="navbar-brand text-white align-middle">Olympic Games</span>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

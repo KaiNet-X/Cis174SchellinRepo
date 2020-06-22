@@ -170,3 +170,8 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Views\Dummy\DefRoute.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Assignment6.1\Views\_ViewImports.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\Assignment6.1\Views\Assignment\StudentView.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\OlympicGames\Views\OlympicHome\Home.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\OlympicGames\Views\Shared\_OlympicLayout.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\OlympicGames\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\OlympicGames\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.cis174kschellin - Web Deploy6.json

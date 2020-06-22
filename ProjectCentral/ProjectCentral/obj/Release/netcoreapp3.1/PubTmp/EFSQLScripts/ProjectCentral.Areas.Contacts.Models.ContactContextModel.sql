@@ -9,3 +9,25 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200619214251_cm')
+BEGIN
+    CREATE TABLE [Contacts] (
+        [ID] int NOT NULL IDENTITY,
+        [Name] nvarchar(max) NOT NULL,
+        [PhoneNumber] nvarchar(max) NOT NULL,
+        [Address] nvarchar(max) NULL,
+        [Note] nvarchar(max) NULL,
+        CONSTRAINT [PK_Contacts] PRIMARY KEY ([ID])
+    );
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200619214251_cm')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200619214251_cm', N'3.1.4');
+END;
+
+GO
+

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjectCentral.Areas.Contacts.Models;
 using ProjectCentral.Areas.Movies.Models;
+using ProjectCentral.Areas.OlympicGames.Models;
 using ProjectCentral.Models;
 
 namespace ProjectCentral
@@ -41,6 +42,9 @@ namespace ProjectCentral
 
             services.AddDbContext<UserContextModel>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("UserContext")));
+
+            services.AddDbContext<OlympicContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("OlympicContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,7 +77,7 @@ namespace ProjectCentral
                     name: "custom",
                     pattern: "{controller=Dummy}/{action=CustRoute}/stoopid/dummy/{ree}");
                 endpoints.MapControllerRoute(
-                    name: "default",
+                    name: "areas",
                     pattern: "{area:exists}/{controller}/{action}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",

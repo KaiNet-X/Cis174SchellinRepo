@@ -1,14 +1,14 @@
 {
   "dependencies": {
-    "mssql2": {
+    "mssql1": {
       "type": "mssql",
       "connectionId": "ContactContext"
     },
-    "mssql3": {
+    "mssql2": {
       "type": "mssql",
       "connectionId": "UserContext"
     },
-    "mssql1": {
+    "mssql3": {
       "type": "mssql",
       "connectionId": "MovieContext"
     }

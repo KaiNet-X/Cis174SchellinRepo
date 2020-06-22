@@ -1,19 +1,19 @@
 {
   "dependencies": {
     "mssql2": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/dbwebappschellindbserver/databases/DbWebAppSchellin_db",
-      "type": "mssql.azure",
-      "connectionId": "ContactContext",
-      "secretStore": "LocalSecretsFile"
-    },
-    "mssql3": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/dbwebappschellindbserver/databases/DbWebAppSchellin_db",
+      "resourceId": "/subscriptions/[parameters('subscriptionId1')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldbserver/databases/ProjectCentralDB",
       "type": "mssql.azure",
       "connectionId": "UserContext",
       "secretStore": "LocalSecretsFile"
     },
     "mssql1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/dbwebappschellindbserver/databases/DbWebAppSchellin_db",
+      "resourceId": "/subscriptions/[parameters('subscriptionId1')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldbserver/databases/ProjectCentralDB",
+      "type": "mssql.azure",
+      "connectionId": "ContactContext",
+      "secretStore": "LocalSecretsFile"
+    },
+    "mssql3": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId1')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldbserver/databases/ProjectCentralDB",
       "type": "mssql.azure",
       "connectionId": "MovieContext",
       "secretStore": "LocalSecretsFile"

@@ -1,22 +1,3 @@
 {
-  "dependencies": {
-    "mssql1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/dbwebappschellindbserver/databases/DbWebAppSchellin_db",
-      "type": "mssql.azure",
-      "connectionId": "MovieContext",
-      "secretStore": "AzureAppSettings"
-    },
-    "mssql2": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/dbwebappschellindbserver/databases/DbWebAppSchellin_db",
-      "type": "mssql.azure",
-      "connectionId": "ContactContext",
-      "secretStore": "AzureAppSettings"
-    },
-    "mssql3": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/dbwebappschellindbserver/databases/DbWebAppSchellin_db",
-      "type": "mssql.azure",
-      "connectionId": "UserContext",
-      "secretStore": "AzureAppSettings"
-    }
-  }
+  "dependencies": {}
 }

@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "mssql3": {
+      "restored": true,
+      "restoreTime": "2020-06-19T16:28:36.2549936Z"
+    },
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2020-06-19T16:27:59.1328697Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-06-19T16:28:16.7961175Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "cis174kschellin"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "abd7ab2b-666d-4ee4-ba25-f2e859a31a3c"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+﻿@model List<Country>
+@{ 
+    string Active(string Current, string TrueActive)
+    {
+        if (Current.ToLower().Equals(TrueActive.ToLower()))
+        {
+            return "active";
+        }
+        return "";
+    }
+}
+<style>
+    .contain{
+        position: absolute;
+        left: 15rem;
+        right: auto
+    }
+</style>
+<div class="float-left position-fixed">
+    <ul class="list-group mr-5 mt-5">
+        @foreach (Game game in ViewBag.Games)
+        {
+            <li class="list-group-item @Active(game.GameName, ViewBag.ActiveGame)">
+                <a class="text-dark" asp-route-game="@game.GameName" asp-route-category="@ViewBag.ActiveCategory">@game.GameName</a>
+            </li>
+        }
+    </ul>
+    <ul class="list-group mr-5 mt-5">
+        @foreach (Category cat in ViewBag.Categories)
+        {
+            <li class="list-group-item @Active(cat.CategoryName, ViewBag.ActiveCategory)">
+                <a class="text-dark" asp-route-category="@cat.CategoryName" asp-route-game="@ViewBag.ActiveGame">@cat.CategoryName</a>
+            </li>
+        }
+    </ul>
+</div>
+<div style="background-color: aquamarine"class="contain mt-5">
+    @foreach (Country country in Model)
+    {
+        <img class="m-3 "src="@Url.Content(country.FlagPath)"
+                data-toggle="tooltip" title="@country.CountryName | @country.Game.GameName @country.Sport.Category.CategoryName" />
+    }
+</div>
