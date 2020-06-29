@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<style>
+    .outlinewhite {
+        border: solid;
+        border-width: 3px;
+        border-radius: 5px;
+        border-color: white;
+        margin: 5px
+    }
+
+    .outlinered {
+        border: solid;
+        border-width: 3px;
+        border-radius: 5px;
+        border-color: red;
+        margin: 5px
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - ProjectCentral</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProjectCentral</a>
+            <button style="border-radius: 5px; color: lightgrey"class="dropdown-toggle ml-md-5 mr-auto bg-dark border-light" type="button" data-toggle="dropdown" data-target=".navbar-collapse">
+                Assignments 
+            </button>
+            @if (ViewBag.Username != null)
+            {
+                <span style="color: lightgray" class="nav-item">- @ViewBag.Role @ViewBag.Username -</span>
+            }
+            <div class="navbar-collapse collapse" id="test">
+                <ul class="dropdown-menu bg-dark">
+                    <li class="outlinewhite">
+                        <a class="nav-link text-light" asp-area="Contacts" asp-controller="ContactsHome" asp-action="Index">Contacts</a>
+                    </li>
+                    <li class="outlinewhite">
+                        <a class="nav-link text-light" asp-area="FutureValue" asp-controller="FutureValueHome" asp-action="Index">Future Value</a>
+                    </li>
+                    <li class="outlinewhite">
+                        <a class="nav-link text-light" asp-area="Movies" asp-controller="MovieHome" asp-action="Index">Movies</a>
+                    </li>
+                    <li class="outlinewhite">
+                        <a class="nav-link text-light" asp-area="AgeCalculator" asp-controller="AgeCalculatorHome" asp-action="Index">Age Calculator</a>
+                    </li>
+                    <li class="outlinewhite">
+                        <a class="nav-link text-light" asp-area="Assignment6.1" asp-controller="Assignment" asp-action="StudentView" asp-route-accesslevel="10">Assignment 6.1</a>
+                    </li>
+                    <li class="outlinewhite">
+                        <a class="nav-link text-light" asp-area="OlympicGames" asp-controller="OlympicHome" asp-action="Home">Olympics</a>
+                    </li>
+                    @if (ViewBag.Role == "Administrator")
+                    {
+                        <li class="outlinered">
+                            <a class="nav-link text-danger" asp-area="Admin" asp-controller="Administration" asp-action="AdminPage">Admin Zone</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer style="background-color: #E1E1E1; outline-width: 2px" class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - ProjectCentral
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

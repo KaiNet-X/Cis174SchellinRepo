@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mssql4": {
+      "type": "mssql",
+      "connectionId": "OlympicContext"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "MovieContext"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "UserContext"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ContactContext"
+    }
+  }
+}
