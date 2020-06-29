@@ -8,6 +8,7 @@ namespace ProjectCentral.Areas.OlympicGames.Models
 {
     public class OlympicContext : DbContext
     {
+        //passes options to the base constructor
         public OlympicContext(DbContextOptions<OlympicContext> Options)
             :base(Options)
         { }
@@ -17,6 +18,7 @@ namespace ProjectCentral.Areas.OlympicGames.Models
         public DbSet<Sport> Sports { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        //seeds initial data for all database entity tables
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

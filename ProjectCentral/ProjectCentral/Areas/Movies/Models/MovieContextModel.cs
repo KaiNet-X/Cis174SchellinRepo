@@ -4,13 +4,14 @@ namespace ProjectCentral.Areas.Movies.Models
 {
     public class MovieContextModel : DbContext
     {
+        //passes options to baseclass
         public MovieContextModel(DbContextOptions<MovieContextModel> options)
             : base(options)
         { }
 
         public DbSet<MovieModel> Movies { get; set; }
         public DbSet<GenreModel> Genres { get; set; }
-
+        //seeds initial moviedata
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

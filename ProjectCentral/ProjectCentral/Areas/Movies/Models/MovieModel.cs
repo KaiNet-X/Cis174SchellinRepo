@@ -17,6 +17,7 @@ namespace ProjectCentral.Areas.Movies.Models
         [Range(1, 5, ErrorMessage = "Invald rating.")]
         public int? Rating { get; set; }
         [Required(ErrorMessage = "Please enter a genre.")]
+        //associates genre to movie
         public string GenreID { get; set; }
         public GenreModel Genre { get; set; }
     }

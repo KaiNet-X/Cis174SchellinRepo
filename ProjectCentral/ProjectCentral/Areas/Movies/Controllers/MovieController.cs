@@ -8,10 +8,12 @@ namespace ProjectCentral.Areas.Movies.Controllers
     public class MovieController : Controller
     {
         private MovieContextModel context;
+        //constructor sets context with dependency injection
         public MovieController(MovieContextModel ctx)
         {
             context = ctx;
         }
+        //get method returns edit view, sets action to add and genre property and empty moviemodel
         [HttpGet]
         public IActionResult Add()
         {
@@ -19,6 +21,7 @@ namespace ProjectCentral.Areas.Movies.Controllers
             ViewBag.Genres = context.Genres.OrderBy(g => g.Name).ToList();
             return View("Edit", new MovieModel());
         }
+        //get method returns edit view with edit action and an existing moviemodel
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -27,6 +30,7 @@ namespace ProjectCentral.Areas.Movies.Controllers
             var movie = context.Movies.Find(id);
             return View(movie);
         }
+        //edits or adds the movie
         [HttpPost]
         public IActionResult Edit(MovieModel movie)
         {
@@ -44,12 +48,14 @@ namespace ProjectCentral.Areas.Movies.Controllers
                 return View(movie);
             }
         }
+        //get method returns delete view with movie model passed to it
         [HttpGet]
         public IActionResult Delete(int id)
         {
             MovieModel movie = context.Movies.Find(id);
             return View(movie);
         }
+        //post method deletes movie and returns to index view of moviehome
         [HttpPost]
         public IActionResult Delete(MovieModel movie)
         {

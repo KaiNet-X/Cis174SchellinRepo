@@ -13,11 +13,12 @@ namespace ProjectCentral.Areas.OlympicGames.Controllers
     public class OlympicHomeController : Controller
     {
         private OlympicContext Context;
+        //sets context
         public OlympicHomeController(OlympicContext context)
         {
             Context = context;
         }
-
+        //inserts all for games and category, filters list of games based on these
         public IActionResult Home(string category = "All", string game = "All")
         {
             List<Game> Games = Context.Games.ToList();
