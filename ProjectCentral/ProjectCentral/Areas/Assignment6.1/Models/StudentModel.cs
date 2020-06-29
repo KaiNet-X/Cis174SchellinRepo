@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ProjectCentral.Areas.Assignment6._1.Models
+﻿namespace ProjectCentral.Areas.Assignment6._1.Models
 {
     public struct StudentModel
     {

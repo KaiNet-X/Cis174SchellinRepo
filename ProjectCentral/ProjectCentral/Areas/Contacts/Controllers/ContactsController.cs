@@ -12,11 +12,12 @@ namespace ProjectCentral.Areas.Contacts.Controllers
         {
             this.context = context;
         }
-        //add method redirects to edit view setting viewbag action to add passing an empty contactmodel
+        //add method returns edit view setting viewbag action to add passing an empty contactmodel
+        [HttpGet]
         public IActionResult Add()
         {
             ViewBag.Action = "Add";
-            return RedirectToAction("Edit", new ContactModel());
+            return View("Edit", new ContactModel());
         }
         //get method sets action to dit and returns the edit view passing an existing contactmodel
         [HttpGet]
