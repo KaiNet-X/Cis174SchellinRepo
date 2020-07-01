@@ -175,3 +175,5 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\OlympicGames\Views\Shared\_OlympicLayout.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\OlympicGames\Views\_ViewImports.cshtml.g.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\OlympicGames\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\OlympicGames\Views\Favorites\Favorites.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\OlympicGames\Views\OlympicHome\Detail.cshtml.g.cs

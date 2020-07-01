@@ -1,14 +1,15 @@
 ﻿@model List<Country>
 @{ 
-    string Active(string Current, string TrueActive)
+    bool Active(string Current, string TrueActive)
     {
         if (Current.ToLower().Equals(TrueActive.ToLower()))
         {
-            return "active";
+            return true;
         }
-        return "";
+        return false;
     }
 }
+
 <style>
     .contain{
         position: absolute;
@@ -16,28 +17,32 @@
         right: auto
     }
 </style>
-<div class="float-left position-fixed">
+<nav style="margin-bottom:90%; top: 0rem" class="float-left position-fixed">
     <ul class="list-group mr-5 mt-5">
         @foreach (Game game in ViewBag.Games)
         {
-            <li class="list-group-item @Active(game.GameName, ViewBag.ActiveGame)">
-                <a class="text-dark" asp-route-game="@game.GameName" asp-route-category="@ViewBag.ActiveCategory">@game.GameName</a>
-            </li>
+        bool active = Active(game.GameName, ViewBag.ActiveGame);
+        <li class="list-group-item @(active ? "active" : "")">
+            <a class="@(active ? "text-light" : "text-dark")" asp-route-game="@game.GameName" asp-route-category="@ViewBag.ActiveCategory">@game.GameName</a>
+        </li>
         }
     </ul>
     <ul class="list-group mr-5 mt-5">
         @foreach (Category cat in ViewBag.Categories)
         {
-            <li class="list-group-item @Active(cat.CategoryName, ViewBag.ActiveCategory)">
-                <a class="text-dark" asp-route-category="@cat.CategoryName" asp-route-game="@ViewBag.ActiveGame">@cat.CategoryName</a>
-            </li>
+        bool active = Active(cat.CategoryName, ViewBag.ActiveCategory);
+        <li class="list-group-item @(active ? "active" : "")">
+            <a class="@(active ? "text-light" : "text-dark")" asp-route-category="@cat.CategoryName" asp-route-game="@ViewBag.ActiveGame">@cat.CategoryName</a>
+        </li>
         }
     </ul>
-</div>
+</nav>
 <div style="background-color: aquamarine"class="contain mt-5">
     @foreach (Country country in Model)
     {
-        <img class="m-3 "src="@Url.Content(country.FlagPath)"
-                data-toggle="tooltip" title="@country.CountryName | @country.Game.GameName @country.Sport.Category.CategoryName" />
+        <a asp-action="Detail" data="country" asp-route-countryname="@country.CountryName" >
+            <img class="m-3 " src="@Url.Content(country.FlagPath)"
+                    data-toggle="tooltip" title="@country.CountryName | @country.Game.GameName @country.Sport.Category.CategoryName" />
+        </a>
     }
 </div>

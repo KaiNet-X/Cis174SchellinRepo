@@ -19,8 +19,15 @@ using ProjectCentral.Areas.OlympicGames.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\User\source\repos\ProjectCentral\ProjectCentral\Areas\OlympicGames\Views\_ViewImports.cshtml"
+using ProjectCentral.Areas.OlympicGames.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66a5355919812ac4a00b13dd88e1f010e1a56d39", @"/Areas/OlympicGames/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e74270035aeb89daad360a636ca091fe28849c75", @"/Areas/OlympicGames/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0ea9ff2c7d789c90e0deff8b45db5463dd81267c", @"/Areas/OlympicGames/Views/_ViewImports.cshtml")]
     public class Areas_OlympicGames_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

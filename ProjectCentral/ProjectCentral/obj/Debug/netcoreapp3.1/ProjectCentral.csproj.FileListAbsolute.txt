@@ -122,8 +122,6 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.AssemblyInfoInputs.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.AssemblyInfo.cs
-C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.RazorAssemblyInfo.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.RazorAssemblyInfo.cs
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.TagHelpers.input.cache
@@ -175,3 +173,7 @@ C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.pdb
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.genruntimeconfig.cache
 C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.csprojAssemblyReference.cache
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\ProjectCentral.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\OlympicGames\Views\OlympicHome\Detail.cshtml.g.cs
+C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\Razor\Areas\OlympicGames\Views\Favorites\Favorites.cshtml.g.cs

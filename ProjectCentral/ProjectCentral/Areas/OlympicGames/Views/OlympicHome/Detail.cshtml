@@ -1,0 +1,21 @@
+﻿@model CountryViewModel
+@{
+
+}
+<form asp-action="Detail" method="post">
+    <div class="container text-center mt-5">
+        <img style="width: 40%; border: 3px solid #555;" class="border-dark" src="@Url.Content(Model.country.FlagPath)" />
+        <h1 class="form-text mb-5 font-weight-bold">@Model.country.CountryName</h1>
+        <h5 class="form-text mb-1">@Model.country.Game.GameName</h5>
+        <h5 class="form-text mb-3">@Model.country.Sport.SportName: @Model.country.Sport.Category.CategoryName</h5>
+        <div class="btn-group-vertical mt-3">
+            @if (!Model.Favorite)
+            {
+                <button type="submit" class="btn btn-primary p-2 pl-5 pr-5 mb-1">Add to Favorites</button>
+            }
+            <a asp-controller="OlympicHome" asp-action="Home" class="btn btn-primary p-2">Home</a>
+        </div>
+    </div>
+    <input type="hidden" asp-for="@Model.country.CountryID" value="@Model.country.CountryID" />
+    <input type="hidden" asp-for="@Model.Favorite" value="@true" />
+</form>
