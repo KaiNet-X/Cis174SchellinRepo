@@ -1,4 +1,4 @@
-﻿@model List<Country>
+﻿@model CountryViewModel
 @{ 
     bool Active(string Current, string TrueActive)
     {
@@ -16,15 +16,22 @@
         left: 15rem;
         right: auto
     }
+    button{
+        fit
+    }
 </style>
 <nav style="margin-bottom:90%; top: 0rem" class="float-left position-fixed">
     <ul class="list-group mr-5 mt-5">
         @foreach (Game game in ViewBag.Games)
         {
-        bool active = Active(game.GameName, ViewBag.ActiveGame);
-        <li class="list-group-item @(active ? "active" : "")">
-            <a class="@(active ? "text-light" : "text-dark")" asp-route-game="@game.GameName" asp-route-category="@ViewBag.ActiveCategory">@game.GameName</a>
-        </li>
+            bool active = Active(game.GameName, ViewBag.ActiveGame);
+            <li class="list-group-item @(active ? "active" : "")">
+                <form asp-action="Home" method="post">
+                    <button type="submit" class="btn btn-block text-left @(active ? "btn-primary" : "btn-light")">@game.GameName</button>
+                    <input type="hidden" asp-for="@Model.game.GameName" value="@game.GameName" />
+                    <input type="hidden" asp-for="@Model.category.CategoryName" value="@ViewBag.ActiveCategory" />
+                </form>
+            </li>
         }
     </ul>
     <ul class="list-group mr-5 mt-5">
@@ -32,13 +39,17 @@
         {
         bool active = Active(cat.CategoryName, ViewBag.ActiveCategory);
         <li class="list-group-item @(active ? "active" : "")">
-            <a class="@(active ? "text-light" : "text-dark")" asp-route-category="@cat.CategoryName" asp-route-game="@ViewBag.ActiveGame">@cat.CategoryName</a>
+            <form asp-action="Home" method="post">
+                <button type="submit" class="btn btn-block text-left @(active ? "btn-primary" : "btn-light")" >@cat.CategoryName</button>
+                <input type="hidden" asp-for="@Model.game.GameName" value="@ViewBag.ActiveGame" />
+                <input type="hidden" asp-for="@Model.category.CategoryName" value="@cat.CategoryName" />
+            </form>
         </li>
         }
     </ul>
 </nav>
 <div style="background-color: aquamarine"class="contain mt-5">
-    @foreach (Country country in Model)
+    @foreach (Country country in Model.Countries)
     {
         <a asp-action="Detail" data="country" asp-route-countryname="@country.CountryName" >
             <img class="m-3 " src="@Url.Content(country.FlagPath)"

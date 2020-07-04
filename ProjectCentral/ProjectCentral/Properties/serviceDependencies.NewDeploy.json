@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "mssql4": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "OlympicContext",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "ContactContext",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "UserContext",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql3": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "MovieContext",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql5": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "Ticket",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

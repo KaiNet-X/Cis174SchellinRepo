@@ -17,6 +17,12 @@
       "type": "mssql.azure",
       "connectionId": "MovieContext",
       "secretStore": "LocalSecretsFile"
+    },
+    "mssql4": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId2')]/resourceGroups/[parameters('resourceGroup1')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "OlympicContext",
+      "secretStore": "LocalSecretsFile"
     }
   }
 }

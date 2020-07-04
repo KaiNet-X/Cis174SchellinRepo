@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\PubTmp\EFSQLScripts\ProjectCentral.Areas.Contacts.Models.ContactContextModel.sql" />
+  <dbfullsql path="C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\PubTmp\EFSQLScripts\ProjectCentral.Areas.Movies.Models.MovieContextModel.sql" />
+  <dbfullsql path="C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\PubTmp\EFSQLScripts\ProjectCentral.Areas.OlympicGames.Models.OlympicContext.sql" />
+  <dbfullsql path="C:\Users\User\source\repos\ProjectCentral\ProjectCentral\obj\Debug\netcoreapp3.1\PubTmp\EFSQLScripts\ProjectCentral.Models.UserContextModel.sql" />
+</sitemanifest>

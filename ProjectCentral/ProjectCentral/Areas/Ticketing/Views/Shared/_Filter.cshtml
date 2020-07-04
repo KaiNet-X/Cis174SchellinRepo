@@ -1,0 +1,61 @@
+﻿@model Filters
+@{
+    string ActiveFilter(byte Active, byte Check)
+    {
+        if (Active == Check) return "active";
+        return "";
+    }
+}
+<form asp-action="Index" method="get">
+    <select class="dropdown smoothlist" asp-for="@Model.PointFilter">
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 1)" value="@(1)">
+            1
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 2)" value="@(2)">
+            2
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 3)" value="@(3)">
+            3
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 4)" value="@(4)">
+            4
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 5)" value="@(5)">
+            5
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 6)" value="@(6)">
+            6
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 7)" value="@(7)">
+            7
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 8)" value="@(8)">
+            8
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 9)" value="@(9)">
+            9
+        </option>
+        <option class="dropdown-item @ActiveFilter(Model.PointFilter, 10)" value="@(10)">
+            10
+        </option>
+    </select>
+    <select class="dropdown smoothlist" asp-for="@Model.StatFilter">
+        <option class="dropdown-item @ActiveFilter((byte)Model.StatFilter, 0)"
+                value="@Status.ToDo">
+            To do
+        </option>
+        <option class="dropdown-item @ActiveFilter((byte)Model.StatFilter, 1)"
+                value="@Status.InProgress">
+            In progress
+        </option>
+        <option class="dropdown-item @ActiveFilter((byte)Model.StatFilter, 2)"
+                value="@Status.QualityAssurance">
+            Quality assurance
+        </option>
+        <option class="dropdown-item @ActiveFilter((byte)Model.StatFilter, 3)"
+                value="@Status.Done">
+            Done
+        </option>
+    </select>
+    <button class="btn btn-primary submit-btn" type="submit">Load filters</button>
+</form>

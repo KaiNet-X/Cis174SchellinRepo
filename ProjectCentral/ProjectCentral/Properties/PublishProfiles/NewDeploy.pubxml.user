@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAAdoTV64UE6fK/wrkbIGrwAAAAACAAAAAAAQZgAAAAEAACAAAAAhYPKvCeXtPpp6K1HTdeZI+zkjzKVh4ywRmrv5pbWVjwAAAAAOgAAAAAIAACAAAAAShTzpS9R5OXkguE42sM2M16UGJEciTkXJ51z91wMPs4AAAACM5CvcS2VtceVB5ijZcdyWazXE8ZZ8TQJfbhQN99Z5VFPpCt439CxlQVrQX1YZeNiJ0k3NzITDEurJ0nyXHTsCqOWTSMUGSsB4MeOneiGY9wnMnwSbNR2c+5cx5apFNxqSQwC1o3a7YtAdfuvEA8gZoeEe2Mo6rqiJ2bGKSjMo70AAAAAWAW8glzSHrFk4+JK+gcVdgOy6unDfXTWt+TZYhD+lRjPh2pgmNZDwl02P/Q3sK7w5a4JyjJDH5MUKfhTUhQOi</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ContactContext">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="MovieContext">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="OlympicContext">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Ticket">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="UserContext">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="ProjectCentral.Areas.Ticketing.Models.TicketContext">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

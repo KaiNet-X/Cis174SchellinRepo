@@ -20,12 +20,14 @@ namespace ProjectCentral.Areas.OlympicGames.Controllers
             Context = context;
         }
 
-        [Route("{area:exists}/{controller}/{action}/{category?}/{game?}")]
         //inserts all for games and category, filters list of games based on these
-        public IActionResult Home(string category = "All", string game = "All")
+        public IActionResult Home(CountryViewModel viewModel)
         {
             FavoritesSessionModel favorites = new FavoritesSessionModel(HttpContext.Session);
             ViewBag.Favorites = favorites.GetFavorites();
+
+            string game = viewModel.game.GameName;
+            string category = viewModel.category.CategoryName;
 
             List<Game> Games = Context.Games.ToList();
             Games.Insert(0, new Game { GameName = "All" });
@@ -64,8 +66,9 @@ namespace ProjectCentral.Areas.OlympicGames.Controllers
             {
                 countries = Context.Countries.Include(c => c.Game)
                     .Include(c => c.Sport).Include(c => c.Sport.Category).OrderBy(c => c.CountryName).ToList();
-            } 
-            return View(countries);
+            }
+            viewModel.Countries = countries;
+            return View(viewModel);
         }
 
         [Route("{area:exists}/{controller}/{action}/{countryname?}")]
@@ -82,7 +85,7 @@ namespace ProjectCentral.Areas.OlympicGames.Controllers
                 .SingleOrDefault(c => c.CountryName.ToLower() == countryname.ToLower());
 
             CountryViewModel model = new CountryViewModel()
-            { country = country, Favorite = favorites.IsFavorite(country), Favorites = favorites.GetFavorites() };
+            { country = country, Favorite = favorites.IsFavorite(country), Countries = favorites.GetFavorites() };
 
             return View(model);
         }

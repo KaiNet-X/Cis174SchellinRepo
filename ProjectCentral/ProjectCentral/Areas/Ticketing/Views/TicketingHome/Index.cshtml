@@ -1,0 +1,49 @@
+﻿@model HomeViewModel
+@{
+    Layout = "_TicketLayout";
+    ViewBag.Title = "Ticket Home";
+
+}
+
+<table style="margin-left:5rem; width:85vw" class="table table-bordered">
+    <thead>
+        <tr class="d-table-row text-center">
+            <th>Name</th>
+            <th>Description</th>
+            <th>Sprint number</th>
+            <th>Point value</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Ticket ticket in Model.Tickets)
+        {
+            <tr class="d-table-row text-center">
+                <td>@ticket.Name</td>
+                <td>@ticket.Description</td>
+                <td>@ticket.SprintNumber</td>
+                <td>@ticket.PointValue</td>
+                <td>
+                    @ticket.Status.ToString()
+                    @if ((int)ticket.Status < 3)
+                    {
+                    <form asp-action="Index" method="post">
+                        <button class="btn btn-primary" type="submit">Mark up</button>
+                        <input type="hidden" asp-for="@Model.UpdateTicket.Status" value="@(ticket.Status + 1)" />
+                        <input type="hidden" asp-for="@Model.UpdateTicket.PointValue" value="@ticket.PointValue" />
+                        <input type="hidden" asp-for="@Model.UpdateTicket.SprintNumber" value="@ticket.SprintNumber" />
+                    </form>
+                    }
+                </td>
+                <td>
+                    <form asp-action="Index" method="post">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <input type="hidden" asp-for="@Model.UpdateTicket.PointValue" value="0" />
+                        <input type="hidden" asp-for="@Model.UpdateTicket.SprintNumber" value="@ticket.SprintNumber"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

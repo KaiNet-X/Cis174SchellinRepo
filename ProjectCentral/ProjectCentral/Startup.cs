@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using ProjectCentral.Areas.Contacts.Models;
 using ProjectCentral.Areas.Movies.Models;
 using ProjectCentral.Areas.OlympicGames.Models;
+using ProjectCentral.Areas.Ticketing.Models;
 using ProjectCentral.Models;
 
 namespace ProjectCentral
@@ -35,17 +36,22 @@ namespace ProjectCentral
                     options.AppendTrailingSlash = true;
                 });
 
+            string serverstring = "Data Source=tcp:projectcentraldatabase.database.windows.net,1433;Initial Catalog=ProjectCentral_db;User Id=Kai@projectcentraldatabase;Password=Ultimatenerd1";
+
             services.AddDbContext<ContactContextModel>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("ContactContext")));
+            options.UseSqlServer(serverstring));
 
             services.AddDbContext<MovieContextModel>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
+            options.UseSqlServer(serverstring));
 
             services.AddDbContext<UserContextModel>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("UserContext")));
+            options.UseSqlServer(serverstring));
 
             services.AddDbContext<OlympicContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("OlympicContext")));
+            options.UseSqlServer(serverstring));
+
+            services.AddDbContext<TicketContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("Ticket")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
