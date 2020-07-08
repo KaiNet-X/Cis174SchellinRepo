@@ -11,28 +11,32 @@ namespace ProjectCentral.Areas.Ticketing.Controllers
     public class TicketingHomeController : Controller
     {
         private TicketContext Context;
+        //initialize context
         public TicketingHomeController (TicketContext context)
         {
             Context = context;
         }
+        //default empty filters, returns index view with filtering
         [HttpGet]
         public IActionResult Index(Filters filter = null)
         {
-            List<Ticket> Tickets = null;
-
-            if (filter != null)
+            List<Ticket> Tickets = new List<Ticket>();
+            if (Context.Tickets.Count() > 0)
             {
-                Tickets = Context.Tickets.Where(T => T.PointValue >= filter.PointFilter)
-                    .Where(T => T.Status >= filter.StatFilter).ToList();
+                if (filter != null)
+                {
+                    Tickets = Context.Tickets.Where(T => T.PointValue >= filter.PointFilter)
+                        .Where(T => T.Status >= filter.StatFilter).ToList();
+                }
+                else
+                {
+                    Tickets = Context.Tickets.ToList();
+                }
             }
-            else
-            {
-                Tickets = Context.Tickets.ToList();
-            }
-            ViewBag.tickets = Tickets;
             HomeViewModel Model = new HomeViewModel { Tickets = Tickets, Filter = filter };
             return View(Model);
         }
+        //binds homeviewmodel and uses its update ticket to either delete or increment the status
         [HttpPost]
         public IActionResult Index(HomeViewModel ticket)
         {

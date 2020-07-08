@@ -8,7 +8,7 @@
 <table style="margin-left:5rem; width:85vw" class="table table-bordered">
     <thead>
         <tr class="d-table-row text-center">
-            <th>Name</th>
+            <th style="width:10rem">Name</th>
             <th>Description</th>
             <th>Sprint number</th>
             <th>Point value</th>
@@ -20,7 +20,7 @@
         @foreach (Ticket ticket in Model.Tickets)
         {
             <tr class="d-table-row text-center">
-                <td>@ticket.Name</td>
+                <td >@ticket.Name</td>
                 <td>@ticket.Description</td>
                 <td>@ticket.SprintNumber</td>
                 <td>@ticket.PointValue</td>

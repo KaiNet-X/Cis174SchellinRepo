@@ -51,7 +51,7 @@ namespace ProjectCentral
             options.UseSqlServer(serverstring));
 
             services.AddDbContext<TicketContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("Ticket")));
+            options.UseSqlServer(serverstring));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

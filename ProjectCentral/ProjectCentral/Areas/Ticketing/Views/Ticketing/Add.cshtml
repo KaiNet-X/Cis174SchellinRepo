@@ -5,14 +5,12 @@
 }
 
     <form asp-action="Add" method="post">
-        <div style="margin-left: 15rem; width:65vw" class="container text-center">
+        <div style="margin-left: 30%; width:65vw" class="container text-center">
             <div class="row">
                 <h1 class="form-text col">Add ticket</h1>
             </div>
-            <div class="row">
-                <div class="col text-danger" asp-validation-summary="All"></div>
-            </div>
             <div class="row mt-5">
+                <div class="col-12 text-left"><span class="text-danger" asp-validation-for="Name"></span></div>
                 <div class="col-md-3 text-left">
                     <label class="form-text m-2">Ticket Name:</label>
                 </div>
@@ -21,6 +19,7 @@
                 </div>
             </div>
             <div class="row mt-5">
+                <div class="col-12 text-left"><span class="text-danger" asp-validation-for="PointValue"></span></div>
                 <div class="col-md-3 text-left">
                     <label class="form-text m-2">Ticket Value:</label>
                 </div>
@@ -29,6 +28,7 @@
                 </div>
             </div>
             <div class="row mt-5">
+                <div class="col-12 text-left"><span class="text-danger" asp-validation-for="Description"></span></div>
                 <div class="col-md-3 text-left">
                     <label class="form-text m-2">Ticket Description:</label>
                 </div>
