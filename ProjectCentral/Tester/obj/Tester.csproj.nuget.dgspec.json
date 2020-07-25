@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\ProjectCentral\\Tester\\Tester.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\Tester\\Tester.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj",
         "projectName": "ProjectCentral",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProjectCentral\\ProjectCentral\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\ProjectCentral\\Tester\\Tester.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\Tester\\Tester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ProjectCentral\\Tester\\Tester.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\Tester\\Tester.csproj",
         "projectName": "Tester",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ProjectCentral\\Tester\\Tester.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\Tester\\Tester.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ProjectCentral\\Tester\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\Tester\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -122,8 +122,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\ProjectCentral.csproj"
               }
             }
           }

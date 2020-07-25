@@ -1,0 +1,46 @@
+﻿@model Ticket
+<style>
+    .rounded{
+        border-radius: 10px;
+    }
+    .btn-new{
+        border-radius: 15px;
+        background-color: purple;
+        color: white;
+    }
+    div{
+        height: 4rem;
+    }
+</style>
+@switch((int)Model.Status)
+{
+    case 0:
+        <div class="bg-danger rounded text-white">
+            @Model.Status
+            <button class="btn btn-new" type="submit">
+                Mark up
+            </button>
+        </div>
+        break;
+    case 1:
+        <div class="bg-warning rounded text-white">
+            @Model.Status
+            <button class="btn btn-new" type="submit">
+                Mark up
+            </button>
+        </div>
+        break;
+    case 2:
+        <div class="bg-primary rounded text-white">
+            @Model.Status
+            <button class="btn btn-new" type="submit">
+                Mark up
+            </button>
+        </div>
+        break;
+    case 3:
+        <div class="bg-success rounded text-white">
+            @Model.Status
+        </div>
+        break;
+}

@@ -63,7 +63,9 @@
         <div class="flex">
             <div style="height:95vh" class="hidden">
                 @if (ViewBag.Title == "Ticket Home")
-                    @Html.Partial("_Filter", (object)Model.Filter)
+                {
+                    <partial name="_Filter" model="@Model.Filter"/>
+                }
                 @if (ViewBag.Title != "Add ticket")
                 {
                     <a class="btn btn-primary add-btn text-white" asp-controller="Ticketing" asp-action="Add">Add</a>
