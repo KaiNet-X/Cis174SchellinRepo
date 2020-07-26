@@ -16,6 +16,10 @@
       "restored": true,
       "restoreTime": "2020-07-04T00:31:11.103565Z"
     },
+    "mssql6": {
+      "restored": true,
+      "restoreTime": "2020-07-26T02:01:06.7441653Z"
+    },
     "mssql5": {
       "restored": true,
       "restoreTime": "2020-07-04T21:01:02.2124158Z"

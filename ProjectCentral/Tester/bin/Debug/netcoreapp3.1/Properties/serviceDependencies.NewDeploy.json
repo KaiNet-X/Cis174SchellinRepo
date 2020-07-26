@@ -23,6 +23,12 @@
       "type": "mssql.azure",
       "connectionId": "MovieContext",
       "secretStore": "AzureAppSettings"
+    },
+    "mssql5": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/projectcentraldatabase/databases/ProjectCentral_db",
+      "type": "mssql.azure",
+      "connectionId": "Ticket",
+      "secretStore": "AzureAppSettings"
     }
   }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectCentral.Areas.Ticketing.Models;
@@ -18,6 +19,7 @@ namespace ProjectCentral.Areas.Ticketing.Controllers
             Context = context;
         }
         //pass empty ticket to add view
+        [Authorize]
         [HttpGet]
         public IActionResult Add()
         {
@@ -25,6 +27,7 @@ namespace ProjectCentral.Areas.Ticketing.Controllers
             return View(ticket);
         }
         //add the ticket to the tickets database
+        [Authorize]
         [HttpPost]
         public IActionResult Add(Ticket ticket)
         {

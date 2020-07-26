@@ -15,6 +15,10 @@
     "mssql3": {
       "type": "mssql",
       "connectionId": "MovieContext"
+    },
+    "mssql5": {
+      "type": "mssql",
+      "connectionId": "Ticket"
     }
   }
 }

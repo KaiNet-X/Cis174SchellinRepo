@@ -1,0 +1,26 @@
+﻿@model ProjectCentral.Areas.Ticketing.Models.ViewModels.LogInViewModel
+@{
+    ViewBag.Title = "Log In";
+}
+
+<div class="container text-left">
+    <div class="row">
+        <h1 class="col mb-5">Log in</h1>
+        <div asp-validation-summary="ModelOnly" class="text-danger col-12"></div>
+        <hr />
+    </div>
+
+    <form asp-action="LogIn" method="post">
+        <div class="row mb-2">
+            <label class="col-md-2">Username:</label>
+            <input class="col-md-6 form-control" asp-for="Username" />
+            <span class="offset-md-2 col-8 text-danger" asp-validation-for="Username"></span>
+        </div>
+        <div class="row mb-2">
+            <label class="col-md-2">Password:</label>
+            <input class="col-md-6 form-control" asp-for="Password" />
+            <span class="offset-md-2 col-8 text-danger" asp-validation-for="Password"></span>
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+</div>

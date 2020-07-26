@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<User> manager
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -41,7 +42,8 @@
             border-width: 0px;
             border-color: purple;
             width: 12rem;
-            margin: 1rem
+            margin: 1rem;
+            margin-left: 0rem;
         }
         .submit-btn {
             border-radius: 15px;
@@ -56,6 +58,14 @@
             top: 85vh !important;
             width: 12rem
         }
+        .generic-btn {
+            border-radius: 15px;
+            padding: 5px;
+            position: relative;
+            width: 12rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -64,7 +74,7 @@
             <div style="height:95vh" class="hidden">
                 @if (ViewBag.Title == "Ticket Home")
                 {
-                    <partial name="_Filter" model="@Model.Filter"/>
+                    <partial name="_Filter" model="@Model.Filter" />
                 }
                 @if (ViewBag.Title != "Add ticket")
                 {
@@ -75,6 +85,17 @@
                     <a style="top:65vh !important" class="btn btn-primary add-btn text-white" asp-controller="Ticketing" asp-action="Add">Clear</a>
                     <a class="btn btn-primary add-btn text-white" asp-controller="TicketingHome" asp-action="Index">Home</a>
                 }
+                <div style="margin-top: 15vh">
+                    @if (!manager.IsSignedIn(User))
+                    {
+                        <a class="btn btn-primary generic-btn text-white" asp-controller="Account" asp-action="Register">Register</a>
+                        <a class="btn btn-primary generic-btn text-white" asp-controller="Account" asp-action="LogIn">Log In</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary generic-btn text-white" asp-controller="Account" asp-action="LogOut">Log Out</a>
+                    }
+                </div>
             </div>
         </div>
     </nav>

@@ -2,4 +2,5 @@
 <sitemanifest>
   <IisApp path="C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\PubTmp\Out\" />
   <dbfullsql path="C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\PubTmp\EFSQLScripts\ProjectCentral.Areas.Ticketing.Models.TicketContext.sql" />
+  <dbfullsql path="C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\PubTmp\EFSQLScripts\ProjectCentral.Areas.Ticketing.Models.UserContext.sql" />
 </sitemanifest>

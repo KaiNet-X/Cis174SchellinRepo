@@ -21,12 +21,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <DestinationConnectionStrings Include="Ticket">
       <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
     </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="User">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </DestinationConnectionStrings>
     <DestinationConnectionStrings Include="UserContext">
       <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
     <EFMigrations Include="ProjectCentral.Areas.Ticketing.Models.TicketContext">
+      <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
+    </EFMigrations>
+    <EFMigrations Include="ProjectCentral.Areas.Ticketing.Models.UserContext">
       <Value>Data Source=tcp:projectcentraldatabase.database.windows.net,1433%3bInitial Catalog=ProjectCentral_db%3bUser Id=Kai%40projectcentraldatabase%3bPassword=Ultimatenerd1</Value>
     </EFMigrations>
   </ItemGroup>

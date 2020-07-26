@@ -368,3 +368,11 @@ C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\
 C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.dll
 C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.pdb
 C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\ProjectCentral.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Ticketing\Views\Account\LogIn.cshtml.g.cs
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Ticketing\Views\Account\Register.cshtml.g.cs
+C:\Users\User\Documents\GitHub\Cis174SchellinRepo\ProjectCentral\ProjectCentral\obj\Release\netcoreapp3.1\Razor\Areas\Ticketing\Views\_ViewStart.cshtml.g.cs

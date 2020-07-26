@@ -26,7 +26,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200704160411_tm')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20200704160411_tm', N'3.1.4');
+    VALUES (N'20200704160411_tm', N'3.1.6');
 END;
 
 GO

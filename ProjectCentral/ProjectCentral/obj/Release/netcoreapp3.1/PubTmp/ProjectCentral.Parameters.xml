@@ -6,4 +6,7 @@
   <parameter name="ProjectCentral.Areas.Ticketing.Models.TicketContext" description="" value="Data Source=tcp:projectcentraldatabase.database.windows.net,1433;Initial Catalog=ProjectCentral_db;User Id=Kai@projectcentraldatabase;Password=Ultimatenerd1" tags="dbfullsql">
     <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\ProjectCentral\.Areas\.Ticketing\.Models\.TicketContext\.sql$" />
   </parameter>
+  <parameter name="ProjectCentral.Areas.Ticketing.Models.UserContext" description="" value="Data Source=tcp:projectcentraldatabase.database.windows.net,1433;Initial Catalog=ProjectCentral_db;User Id=Kai@projectcentraldatabase;Password=Ultimatenerd1" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\User\\Documents\\GitHub\\Cis174SchellinRepo\\ProjectCentral\\ProjectCentral\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\ProjectCentral\.Areas\.Ticketing\.Models\.UserContext\.sql$" />
+  </parameter>
 </parameters>
